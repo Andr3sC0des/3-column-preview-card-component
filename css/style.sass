@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap')
+
+$bright-orange: hsl(31, 77%, 52%)
+$dark-cyan: hsl(184, 100%, 22%)
+$very-dark-cyan: hsl(179, 100%, 13%)
+
+$transparent-white-par: hsla(0, 0%, 100%, 0.75)
+$very-light-gray-bg-head-btn: hsl(0, 0%, 95%)
+
+$font-size: 15px
+
+$familybig: 'big shoulders display', cursive
+$familylex: 'lexend deca', sans-serif
+$interlineado: 2rem
+
+// COLOR COMPONENT
+
+.color
+    &--orange
+        color: $bright-orange
+    &--darkcyan
+        color: $dark-cyan
+    &--verydarkcyan
+        color: $very-dark-cyan
+
+// END COLOR COMPONENT
+
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+
+.flag
+    position: absolute
+    top: 0
+    margin-top: 5px
+    border-top-right-radius: 1rem
+    border-bottom-right-radius: 1rem
+    background: #2e2e2e
+    width: 120px
+    height: 50px
+    transition: all 1s
+    display: flex
+    justify-content: center
+    align-items: center
+    color: #fff
+    font-family: sans-serif
+    text-transform: uppercase
+    font-weight: 700
+    font-size: 16px
+    &:hover
+        width: 400px
+        color: transparent
+        .attribution
+            width: 400px
+            opacity: 1
+
+.attribution
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    transition: all 1s
+    width: 0
+    font-size: 16px
+    text-align: center
+    opacity: 0
+    white-space: nowrap
+    overflow: hidden
+    font-family: sans-serif
+    color: #fff
+    text-decoration: none
+    a
+        color: #fff
+
+
+html
+    font-size: $font-size
+
+.cardcon
+    display: grid
+    justify-content: center
+    align-items: center
+    height: 100vh
+.card
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr
+    width: fit-content
+    &__sedans
+        padding: $interlineado
+        background: $bright-orange
+    &__suvs
+        padding: $interlineado
+        background: $dark-cyan
+    &__luxury
+        padding: $interlineado
+        background: $very-dark-cyan
+    &__image
+    &__title
+        margin-top: $interlineado
+        color: $very-light-gray-bg-head-btn
+        text-transform: uppercase
+        font-family: $familybig
+        font-size: 2rem
+    &__paragraph
+        margin-top: $interlineado
+        line-height: 1.5rem
+        color: $transparent-white-par
+        font-family: $familylex
+        min-height: 2rem
+        max-width: 15rem
+    &__button
+        margin-top: $interlineado
+        background: #fff
+        border-radius: 10rem
+        padding: 1rem
+        text-decoration: none
+        font-family: $familylex
+        display: inline-block
+        text-transform: capitalize
+        &:hover
+            background: transparent
+            outline: 2px solid #fff
+            color: #fff
+
+
+
+@media screen and ( max-width: 914px)
+    .cardcon
+        height: max-content
+        margin: 10px
+    .card
+        grid-template-columns: 1fr
+
+    

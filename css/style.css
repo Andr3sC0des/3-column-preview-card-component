@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+.color--orange {
+  color: hsl(31deg, 77%, 52%);
+}
+.color--darkcyan {
+  color: hsl(184deg, 100%, 22%);
+}
+.color--verydarkcyan {
+  color: hsl(179deg, 100%, 13%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.flag {
+  position: absolute;
+  top: 0;
+  margin-top: 5px;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  background: #2e2e2e;
+  width: 120px;
+  height: 50px;
+  transition: all 1s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 16px;
+}
+.flag:hover {
+  width: 400px;
+  color: transparent;
+}
+.flag:hover .attribution {
+  width: 400px;
+  opacity: 1;
+}
+
+.attribution {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 1s;
+  width: 0;
+  font-size: 16px;
+  text-align: center;
+  opacity: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  font-family: sans-serif;
+  color: #fff;
+  text-decoration: none;
+}
+.attribution a {
+  color: #fff;
+}
+
+html {
+  font-size: 15px;
+}
+
+.cardcon {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: fit-content;
+}
+.card__sedans {
+  padding: 2rem;
+  background: hsl(31deg, 77%, 52%);
+}
+.card__suvs {
+  padding: 2rem;
+  background: hsl(184deg, 100%, 22%);
+}
+.card__luxury {
+  padding: 2rem;
+  background: hsl(179deg, 100%, 13%);
+}
+.card__title {
+  margin-top: 2rem;
+  color: hsl(0deg, 0%, 95%);
+  text-transform: uppercase;
+  font-family: "big shoulders display", cursive;
+  font-size: 2rem;
+}
+.card__paragraph {
+  margin-top: 2rem;
+  line-height: 1.5rem;
+  color: hsla(0deg, 0%, 100%, 0.75);
+  font-family: "lexend deca", sans-serif;
+  min-height: 2rem;
+  max-width: 15rem;
+}
+.card__button {
+  margin-top: 2rem;
+  background: #fff;
+  border-radius: 10rem;
+  padding: 1rem;
+  text-decoration: none;
+  font-family: "lexend deca", sans-serif;
+  display: inline-block;
+  text-transform: capitalize;
+}
+.card__button:hover {
+  background: transparent;
+  outline: 2px solid #fff;
+  color: #fff;
+}
+
+@media screen and (max-width: 914px) {
+  .cardcon {
+    height: max-content;
+    margin: 10px;
+  }
+  .card {
+    grid-template-columns: 1fr;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
